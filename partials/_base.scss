@@ -1,0 +1,237 @@
+/*
+    Base
+    ---
+    Default style rules.
+    E.G. html, body, a
+*/
+
+@import 'reset';
+
+// Colour Variables
+$canetticodesblack:     #111;        // Black
+$canetticodesgrey:      #f3f3f3;     // Grey    
+$canetticodeswhite:     #fff;        // White
+$canetticodesyellow:    #ffcc00;     // Alt
+$canetticodesyellowhov: #f0c001;     // Alt Hover
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+$pfont:       'Open Sans', sans-serif;
+$pfontbold:   700;
+$pfontheavy:  800;
+
+// Spacing Variables
+$maxwidth:       1250px;
+$maxwidthnarrow: 1000px;
+$ds:             50px;
+$dshalf:         calc(#{$ds} / 2);
+$dsdoub:         calc(#{$ds} * 2);
+
+// Media Queries
+$screen-sm: 576px;
+@mixin sm {
+   @media (max-width: #{$screen-sm}) {
+       @content;
+   }
+}
+
+// Mixins
+@mixin transitionall($length) {
+  -webkit-transition: all $length ease-in-out;
+  -moz-transition: all $length ease-in-out;
+  -o-transition: all $length ease-in-out;
+  transition: all $length ease-in-out;
+}
+
+@mixin transitiondelay($length) {
+  -webkit-transition-delay: $length;
+  -moz-transition-delay: $length;
+  -o-transition-delay: $length;
+  transition-delay: $length;
+}
+
+// Animation
+@keyframes fade-in {      // Fade In
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Basics
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $pfont;
+  background-color: $canetticodeswhite;
+  color: $canetticodesblack;
+  padding: 0;
+  margin: 0;
+}
+
+// Smooth Scrolling
+@media screen and (prefers-reduced-motion: reduce) {
+	a[href*="#"] {
+		scroll-behavior: auto;
+	}
+}
+
+h1 {
+    font-weight: $pfontheavy;
+    font-size: 3.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5vh 0;
+    line-height: 1.25;
+    letter-spacing: .5rem;
+    margin: 0 -.5rem 0 0;
+    @include sm {
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    @extend h1;
+    font-size: 1.75rem;
+    letter-spacing: .05rem;
+    padding: 0;
+    margin: 0 0 $dshalf 0;    
+    text-align: left;
+    text-transform: unset;
+}
+
+h3 {
+    @extend h2;
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1.05rem;
+    line-height: 1.75rem;
+    margin-top: $dshalf;
+    img {
+      & + strong {
+        font-size: .75rem;
+      }
+    }
+    &.center {
+      text-align: center;
+    }
+}
+
+a {
+    color: $canetticodesblack;
+    text-decoration: none;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+button, .btn {
+  background: $canetticodesyellow;
+  border: none;
+  box-shadow: none;
+  padding: 7px 14px;
+  margin: $dshalf auto;
+  display: inline-block;
+  color: $canetticodesblack;
+  text-decoration: none;
+  position: relative;
+  @include transitionall(.3s);
+  z-index: 1;
+  &.btn--alt {
+    background: transparent;
+    border: 2px solid $canetticodesblack;
+    &:hover{
+      background: $canetticodeswhite;
+    }
+  }
+  img {
+    height: 1rem;
+    margin-bottom: -2px;
+    margin-left: 5px;
+    @include transitionall(.3s);
+  }
+  &:hover {
+    cursor: pointer;
+    padding: 7px 10px 7px 14px;
+    background: $canetticodesyellowhov;
+    img {
+      margin-left: 9px;
+    }
+  }
+}
+
+.strong {
+    font-weight: $pfontbold;
+}
+
+hr {
+    box-shadow: none;
+    border: 1px solid $canetticodesblack;
+    opacity: 0.5;
+    height: 0px;
+    width: 12.5%;
+    margin: 75px 0 25px 0px;
+}
+
+blockquote {
+    font-family: $pfont;
+    margin: 75px 75px 5px 75px;
+    & + p {
+        font-family: $pfont;
+        margin: 25px 75px 75px 75px;
+        font-size: .7em;
+    }
+    @include sm {
+      margin: 75px 25px 5px 25px;
+      & + p {
+        margin: 25px 25px 75px 25px;
+      }
+    }
+}
+
+code {
+  font-family: monospace;
+  background: rgba(255,255,255,0.1);
+}
+
+pre {
+  padding: 15px;
+  margin-top: 35px;
+  width: 100%;
+  overflow-y: scroll;
+  background: rgba(255,255,255,0.1);
+  code {
+    font-size: 1rem;
+    background: transparent;
+  }
+}
+
+s {   // Strikethrough
+  opacity: 0.5;
+}
+
+mark {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-color: transparent;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 33.3%;
+    bottom: 0;
+    left: 0;
+    background-color: $canetticodesyellow;
+  }
+}

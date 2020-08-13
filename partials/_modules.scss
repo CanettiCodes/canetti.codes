@@ -1,0 +1,106 @@
+/*
+    Modules
+    ---
+    Modules are the reusable, modular parts of the design.
+    E.G. callouts, sidebar sections, product lists
+*/
+.logo {
+    font-weight: $pfontheavy;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    text-align: center;
+    padding-bottom: $dshalf;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: $ds;
+    a {
+        font-weight: $pfontheavy;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+    }
+}
+
+.quote {
+    max-width: 600px;
+    margin: $dsdoub auto $ds auto;
+    padding: $dshalf $ds;
+    background-color: $canetticodesgrey;
+    border-radius: 20px;
+    p {
+        margin: 0;
+    }
+    .quote__person {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20px;
+        p {
+            font-size: .75rem;
+            line-height: 1.25rem;
+        }
+        img {
+            height: 55px;
+            width: auto;
+            margin-right: 20px;
+            border-radius: 100%;
+            background-color: #fff;
+        }
+    }
+}
+
+.cta {
+    position: relative;
+    background: $canetticodeswhite;
+    color: $canetticodesblack;
+    padding: 8px 14px;
+    width: auto;
+    //margin: 0 auto;
+    &:hover {
+        background: $canetticodesyellow;
+        color: $canetticodeswhite;
+    }
+}
+
+.collection-list {
+    height: 200px;
+    max-width: 500px;
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 50px;
+    padding: 0 25px;
+    background: transparent;
+    text-align: center;
+    h3 {
+        text-align: center;
+        display: inline-block;
+        width: auto;
+        margin: 25px auto 0 auto;
+        color: $canetticodeswhite;
+        text-decoration: underline;
+        &:hover {
+            color: $canetticodesyellow;
+        }
+    }
+}
+
+.page-body__section__content__share {
+    a {
+        &:not(:first-of-type) {
+            margin-left: 15px;
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+    color: $canetticodesblack;
+    font-size: .65rem;
+}

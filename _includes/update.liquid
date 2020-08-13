@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include meta %}
+        {% include socialmeta %}
+    </head>
+    <body class="{{ pageClass }}">
+      <div class="wrapper">
+        <video src="/vid/bg_vid.mp4" loop muted autoplay></video>
+        <div class="page-body__section">
+            <a href="/" class="sub-logo"><img src="/img/logo.png" srcset="/img/logo@2x.png 2x" alt="Back to homepage"></a>
+            <h1>{{ pageTitle }}</h1>
+            <div class="page-body__section__content">
+                <span class="page-body__section__content__share">
+                {% include share %}
+                </span>
+                {{ content }}
+            </div>
+        </div>
+        {% include footer %}
+      </div>
+    </body>
+</html>

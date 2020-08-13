@@ -1,0 +1,27 @@
+/*
+    Pages
+    ---
+    Specific page styling.
+    E.G. Homepage.
+*/
+
+body {
+    &.home {
+        h1 {
+            max-width: 950px;
+            margin: auto;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            margin-top: $ds;
+            p {
+                margin-top: 12.5px;
+            }
+            .btn {
+                margin: $dshalf auto 0;
+            }
+        }
+    }
+}

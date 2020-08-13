@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>/updates/launch/</loc>
+            <lastmod>2020-05-03T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/404.html</loc>
+            <lastmod>2020-08-13T12:28:54.503Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/README/</loc>
+            <lastmod>2020-08-13T12:28:54.503Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/about/</loc>
+            <lastmod>2020-08-13T12:28:54.505Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/</loc>
+            <lastmod>2020-08-13T12:28:54.543Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/updates/</loc>
+            <lastmod>2020-08-13T12:28:54.547Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+</urlset>

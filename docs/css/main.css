@@ -1,0 +1,336 @@
+/*
+    Main
+    ---
+    Compiles the .scss partials and creates the final CSS file.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+* {
+  box-sizing: border-box; }
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0px; }
+
+/*
+    Base
+    ---
+    Default style rules.
+    E.G. html, body, a
+*/
+* {
+  box-sizing: border-box; }
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0px; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+html {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+  color: #111;
+  padding: 0;
+  margin: 0; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  a[href*="#"] {
+    scroll-behavior: auto; } }
+h1, h2, h3 {
+  font-weight: 800;
+  font-size: 3.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5vh 0;
+  line-height: 1.25;
+  letter-spacing: .5rem;
+  margin: 0 -.5rem 0 0; }
+  @media (max-width: 576px) {
+    h1, h2, h3 {
+      font-size: 3rem; } }
+
+h2, h3 {
+  font-size: 1.75rem;
+  letter-spacing: .05rem;
+  padding: 0;
+  margin: 0 0 calc(50px / 2) 0;
+  text-align: left;
+  text-transform: unset; }
+
+h3 {
+  font-size: 1.25rem; }
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.75rem;
+  margin-top: calc(50px / 2); }
+  p img + strong {
+    font-size: .75rem; }
+  p.center {
+    text-align: center; }
+
+a {
+  color: #111;
+  text-decoration: none;
+  position: relative; }
+  a:hover {
+    cursor: pointer; }
+
+button, .btn {
+  background: #ffcc00;
+  border: none;
+  box-shadow: none;
+  padding: 7px 14px;
+  margin: calc(50px / 2) auto;
+  display: inline-block;
+  color: #111;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 1; }
+  button.btn--alt, .btn.btn--alt {
+    background: transparent;
+    border: 2px solid #111; }
+    button.btn--alt:hover, .btn.btn--alt:hover {
+      background: #fff; }
+  button img, .btn img {
+    height: 1rem;
+    margin-bottom: -2px;
+    margin-left: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  button:hover, .btn:hover {
+    cursor: pointer;
+    padding: 7px 10px 7px 14px;
+    background: #f0c001; }
+    button:hover img, .btn:hover img {
+      margin-left: 9px; }
+
+.strong {
+  font-weight: 700; }
+
+hr {
+  box-shadow: none;
+  border: 1px solid #111;
+  opacity: 0.5;
+  height: 0px;
+  width: 12.5%;
+  margin: 75px 0 25px 0px; }
+
+blockquote {
+  font-family: "Open Sans", sans-serif;
+  margin: 75px 75px 5px 75px; }
+  blockquote + p {
+    font-family: "Open Sans", sans-serif;
+    margin: 25px 75px 75px 75px;
+    font-size: .7em; }
+  @media (max-width: 576px) {
+    blockquote {
+      margin: 75px 25px 5px 25px; }
+      blockquote + p {
+        margin: 25px 25px 75px 25px; } }
+
+code {
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.1); }
+
+pre {
+  padding: 15px;
+  margin-top: 35px;
+  width: 100%;
+  overflow-y: scroll;
+  background: rgba(255, 255, 255, 0.1); }
+  pre code {
+    font-size: 1rem;
+    background: transparent; }
+
+s {
+  opacity: 0.5; }
+
+mark {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-color: transparent; }
+  mark:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 33.3%;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc00; }
+
+/*
+    Layout
+    ---
+    Layout rules divide the page into sections. Layouts hold one or more modules together.
+    E.G. header, footer
+*/
+.page-body__section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .page-body__section:not(:first-of-type) {
+    margin-top: 50px; }
+  .page-body__section:nth-child(odd) {
+    padding: 60px 0;
+    background: #f3f3f3; }
+  .page-body__section.page-body__section__content--sub {
+    justify-content: flex-start; }
+  .page-body__section .page-body__section__wrapper {
+    max-width: 1250px;
+    margin: auto;
+    width: 100%; }
+  .page-body__section .page-body__section__wrapper__content {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto; }
+
+footer {
+  position: relative;
+  z-index: 2;
+  padding: 50px 0; }
+  footer .footer__content {
+    max-width: 1250px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+/*
+    Modules
+    ---
+    Modules are the reusable, modular parts of the design.
+    E.G. callouts, sidebar sections, product lists
+*/
+.logo {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  text-align: center;
+  padding-bottom: calc(50px / 2); }
+
+nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px; }
+  nav a {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4em; }
+
+.quote {
+  max-width: 600px;
+  margin: calc(50px * 2) auto 50px auto;
+  padding: calc(50px / 2) 50px;
+  background-color: #f3f3f3;
+  border-radius: 20px; }
+  .quote p {
+    margin: 0; }
+  .quote .quote__person {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px; }
+    .quote .quote__person p {
+      font-size: .75rem;
+      line-height: 1.25rem; }
+    .quote .quote__person img {
+      height: 55px;
+      width: auto;
+      margin-right: 20px;
+      border-radius: 100%;
+      background-color: #fff; }
+
+.cta {
+  position: relative;
+  background: #fff;
+  color: #111;
+  padding: 8px 14px;
+  width: auto; }
+  .cta:hover {
+    background: #ffcc00;
+    color: #fff; }
+
+.collection-list {
+  height: 200px;
+  max-width: 500px;
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 50px;
+  padding: 0 25px;
+  background: transparent;
+  text-align: center; }
+  .collection-list h3 {
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    margin: 25px auto 0 auto;
+    color: #fff;
+    text-decoration: underline; }
+    .collection-list h3:hover {
+      color: #ffcc00; }
+
+.page-body__section__content__share a:not(:first-of-type) {
+  margin-left: 15px; }
+
+.copyright {
+  text-align: center;
+  color: #111;
+  font-size: .65rem; }
+
+/*
+    Pages
+    ---
+    Specific page styling.
+    E.G. Homepage.
+*/
+body.home h1, body.home h2, body.home h3 {
+  max-width: 950px;
+  margin: auto; }
+body.home ul {
+  list-style: none; }
+body.home li {
+  margin-top: 50px; }
+  body.home li p {
+    margin-top: 12.5px; }
+  body.home li .btn {
+    margin: calc(50px / 2) auto 0; }
+
+/*# sourceMappingURL=main.css.map */
