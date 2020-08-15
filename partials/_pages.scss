@@ -24,4 +24,9 @@ body {
             }
         }
     }
+    &.contact {
+        .hubspot-link__container.sproket {
+            display: none;
+        }
+    }
 }

@@ -1,0 +1,40 @@
+---
+layout: layout.liquid
+pageTitle: Contact
+pageClass: contact
+pageFeatureImage: /images/feature.jpg
+pageFeatureImageRetina: /images/feature@2x.jpg
+pageDesc: Let's get to work on your project.
+---
+
+<div class="page-body__section">
+  <h1>Let's <mark> get to work</mark>.</h1>
+  <div class="page-body__section__wrapper">
+    <div class="page-body__section__wrapper__content">
+        <form class="canetti_codes__form" data-parsley-validate>
+            <div class="canetti_codes__form__form-group">
+                <label for="canetti_codes_contact_name">Names<sup>*</sup></label>
+                <input type="text" id="canetti_codes_contact_name" name="canetti_codes_contact_name" required data-parsley-required />
+            </div>
+            <div class="canetti_codes__form__form-group">
+                <label for="canetti_codes_contact_company">Company Name</label>
+                <input type="text" id="canetti_codes_contact_company" name="canetti_codes_contact_company" />
+            </div>
+            <div class="canetti_codes__form__form-group">
+                <label for="canetti_codes_contact_email">Email<sup>*</sup></label>
+                <input type="email" data-parsley-type="email" id="canetti_codes_contact_email" name="canetti_codes_contact_email" required data-parsley-required />
+            </div>
+            <div class="canetti_codes__form__form-group">
+                <label for="canetti_codes_contact_message">Message<sup>*</sup></label>
+                <textarea id="canetti_codes_contact_message" name="canetti_codes_contact_message" required data-parsley-required></textarea>
+            </div>
+            <p>
+                By submitting this form, you consent to allow Canetti • Codes to store and process the personal information submitted above to provide you the content requested. <a href="/privacy-policy/">Read Privacy Policy</a>.
+            </p>
+            <div class="canetti_codes__form__form-group">
+                <button class="btn" type="submit">Send Message <img src="/img/icons/right-dc.svg" alt=""></button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>  

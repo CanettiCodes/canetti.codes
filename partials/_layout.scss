@@ -26,11 +26,159 @@
         max-width: $maxwidth;
         margin: auto;
         width: 100%;
+        &.page-body__section__wrapper--project {
+            max-width: 100%;
+            padding: $dsdoub 0;
+            border-bottom: 1px solid $canetticodesgrey;
+            &:nth-child(even) {
+                padding: 60px 0;
+                background: $canetticodesgrey;
+                z-index: -2;
+            }
+            &:first-of-type {
+                margin-top: $ds;
+            }
+            span {
+                text-transform: uppercase;
+                font-size: .7rem;
+                letter-spacing: 0.2em;
+                text-align: center;
+                margin-bottom: $dshalf;
+                display: inline-block;
+                img {
+                    height: 1rem;
+                    margin-bottom: -2px;
+                    margin-left: 5px;
+                  }
+            }
+            ul {
+                list-style: none;
+                li {
+                    margin-bottom: 5px;
+                }
+            }
+            a {
+                text-decoration: underline;
+            }
+            p.no-slider-img {
+                padding-top: $dshalf;
+                text-align: center;
+                img {
+                    max-width: 90%;
+                    margin: auto;
+                    width: 100%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+                }
+            }
+            &.page-body__section__wrapper--project--invisalign-go {
+                mark {
+                    &:before {
+                        background-color: #d0df00;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--align-growth-summit {
+                mark {
+                    &:before {
+                        background-color: #bc955a;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--invisalign-scientific-symposium {
+                mark {
+                    &:before {
+                        background-color: #009ACE;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--fast-track-250 {
+                mark {
+                    &:before {
+                        background-color: #23acad;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--kellars {
+                mark {
+                    &:before {
+                        background-color: #559D93;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--emerald-kitchens {
+                mark {
+                    &:before {
+                        background-color: #00AF9E;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--barnsley-squash-club {
+                mark {
+                    &:before {
+                        background-color: #006eb4;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--fit4it-fitness {
+                mark {
+                    &:before {
+                        background-color: #86c44a;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--nouveau-skin-therapy {
+                mark {
+                    &:before {
+                        background-color: #f7dde0;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--abzorb {
+                mark {
+                    &:before {
+                        background-color: #009dc7;
+                    }
+                }
+            }
+        }
     }
     .page-body__section__wrapper__content {
         max-width: 500px;
         width: 100%;
         margin: 0 auto;
+    }
+}
+
+.page-body__section__cta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $canetticodesyellow;
+    border-top: 2px solid $canetticodesblack;
+    border-bottom: 2px solid $canetticodesblack;
+    @include transitionall(.3s);
+    a {
+        font-size: 2rem;
+        font-weight: $pfontheavy;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+        text-align: center;
+        padding: $dsdoub 0;
+        img {
+            height: 1.75rem;
+            margin-bottom: -3px;
+            margin-left: 5px;
+            @include transitionall(.3s);
+        }
+    }
+    &:hover {
+        background-color: $canetticodesyellowhov;
+        img {
+            margin-left: 15px;
+        }
     }
 }
 
