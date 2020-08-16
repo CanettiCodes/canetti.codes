@@ -66,7 +66,8 @@ h1, h2, h3 {
   margin: 0 -.5rem 0 0; }
   @media (max-width: 576px) {
     h1, h2, h3 {
-      font-size: 3rem; } }
+      font-size: 1.25rem;
+      padding-bottom: 0; } }
 
 h2, h3 {
   font-size: 1.75rem;
@@ -266,10 +267,17 @@ mark {
         background-color: #f7dde0; }
       .page-body__section .page-body__section__wrapper.page-body__section__wrapper--project.page-body__section__wrapper--project--abzorb mark:before {
         background-color: #009dc7; }
+      .page-body__section .page-body__section__wrapper.page-body__section__wrapper--project.page-body__section__wrapper--project--invisalign mark:before {
+        background-color: #186aa6; }
+      .page-body__section .page-body__section__wrapper.page-body__section__wrapper--project.page-body__section__wrapper--project--loreal-luxe mark:before {
+        background-color: #b6c630; }
   .page-body__section .page-body__section__wrapper__content {
     max-width: 500px;
     width: 100%;
     margin: 0 auto; }
+    @media (max-width: 576px) {
+      .page-body__section .page-body__section__wrapper__content {
+        padding: calc(50px / 2); } }
 
 .page-body__section__cta {
   position: relative;
@@ -292,6 +300,10 @@ mark {
     letter-spacing: 0.4em;
     text-align: center;
     padding: calc(50px * 2) 0; }
+    @media (max-width: 576px) {
+      .page-body__section__cta a {
+        font-size: 1.5rem;
+        line-height: 2.5rem; } }
     .page-body__section__cta a img {
       height: 1.75rem;
       margin-bottom: -3px;
@@ -300,6 +312,9 @@ mark {
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
+      @media (max-width: 576px) {
+        .page-body__section__cta a img {
+          display: none; } }
   .page-body__section__cta:hover {
     background-color: #f0c001; }
     .page-body__section__cta:hover img {
@@ -366,6 +381,9 @@ nav {
       margin-right: 20px;
       border-radius: 100%;
       background-color: #fff; }
+  @media (max-width: 576px) {
+    .quote {
+      border-radius: 0; } }
 
 .cta {
   position: relative;
@@ -412,6 +430,13 @@ nav {
   margin: 50px 0;
   width: 140%;
   margin-left: -20%; }
+  .slick-slider.eshot {
+    width: 75%;
+    margin: calc(50px / 2) 0 0 0; }
+  @media (max-width: 576px) {
+    .slick-slider .slick-slide {
+      width: 100%;
+      height: auto; } }
   .slick-slider .slick-dots {
     width: 100%;
     list-style: none;
@@ -439,6 +464,10 @@ nav {
         cursor: default; }
       .slick-slider .slick-dots li button {
         display: none; }
+  @media (max-width: 576px) {
+    .slick-slider {
+      width: 100%;
+      margin-left: 0; } }
 
 .copyright {
   text-align: center;

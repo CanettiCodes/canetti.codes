@@ -140,12 +140,29 @@
                     }
                 }
             }
+            &.page-body__section__wrapper--project--invisalign {
+                mark {
+                    &:before {
+                        background-color: #186aa6;
+                    }
+                }
+            }
+            &.page-body__section__wrapper--project--loreal-luxe {
+                mark {
+                    &:before {
+                        background-color: #b6c630;
+                    }
+                }
+            }
         }
     }
     .page-body__section__wrapper__content {
         max-width: 500px;
         width: 100%;
         margin: 0 auto;
+        @include sm {
+            padding: $dshalf;
+        }
     }
 }
 
@@ -167,11 +184,18 @@
         letter-spacing: 0.4em;
         text-align: center;
         padding: $dsdoub 0;
+        @include sm {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
         img {
             height: 1.75rem;
             margin-bottom: -3px;
             margin-left: 5px;
             @include transitionall(.3s);
+            @include sm {
+                display: none;
+            }
         }
     }
     &:hover {

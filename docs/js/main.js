@@ -23,6 +23,14 @@ $('.invisalign-scientific-symposium-images').slick({
   autoplaySpeed: 4000,
 });
 
+$('.loreal-luxe-images').slick({
+  arrows: false,
+  dots: true,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+});
+
 $('.fast-track-250-images').slick({
   arrows: false,
   dots: true,
@@ -56,6 +64,14 @@ $('.barnsley-squash-club-images').slick({
 });
 
 $('.fit4it-fitness-images').slick({
+  arrows: false,
+  dots: true,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+});
+
+$('.invisalign-eshot-images').slick({
   arrows: false,
   dots: true,
   slidesToScroll: 1,
