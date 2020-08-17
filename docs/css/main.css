@@ -98,15 +98,6 @@ a {
   a:hover {
     cursor: pointer; }
 
-ul {
-  padding-left: 50px;
-  margin: calc(50px / 2) 0; }
-  @media (max-width: 576px) {
-    ul {
-      padding-left: 30px; } }
-  ul li {
-    margin-bottom: calc(50px / 2); }
-
 button, .btn {
   background: #ffcc00;
   border: none;
@@ -556,6 +547,14 @@ body.home li {
     margin: calc(50px / 2) auto 0; }
 body.home .page-body__section__cta {
   margin-top: 0; }
+body.sub ul {
+  padding-left: 50px;
+  margin: calc(50px / 2) 0; }
+  @media (max-width: 576px) {
+    body.sub ul {
+      padding-left: 30px; } }
+  body.sub ul li {
+    margin-bottom: calc(50px / 2); }
 body.contact .hubspot-link__container.sproket {
   display: none; }
 

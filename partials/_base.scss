@@ -137,17 +137,6 @@ a {
     }
 }
 
-ul {
-  padding-left: $ds;
-  margin: $dshalf 0;
-  @include sm {
-    padding-left: 30px;
-  }
-  li {
-    margin-bottom: $dshalf;
-  }
-}
-
 button, .btn {
   background: $canetticodesyellow;
   border: none;
