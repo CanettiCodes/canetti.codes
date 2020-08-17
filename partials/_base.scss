@@ -92,7 +92,7 @@ h1 {
     margin: 0 -.5rem 0 0;
     @include sm {
       font-size: 1.25rem;
-      padding-bottom: 0;
+      padding: $dshalf 15px 0;
     }
 }
 

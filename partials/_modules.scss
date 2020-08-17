@@ -114,8 +114,12 @@ nav {
     width: 140%;
     margin-left: -20%;
     &.eshot {
-        width: 75%;
-        margin: $dshalf 0 0 0;
+        width: 90%;
+        margin: 0 auto;
+        .slick-slide {
+            margin: $ds $dshalf $dshalf;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+        }
     }
     .slick-slide {
         @include sm {

@@ -67,7 +67,7 @@ h1, h2, h3 {
   @media (max-width: 576px) {
     h1, h2, h3 {
       font-size: 1.25rem;
-      padding-bottom: 0; } }
+      padding: calc(50px / 2) 15px 0; } }
 
 h2, h3 {
   font-size: 1.75rem;
@@ -303,7 +303,8 @@ mark {
     @media (max-width: 576px) {
       .page-body__section__cta a {
         font-size: 1.5rem;
-        line-height: 2.5rem; } }
+        line-height: 2.5rem;
+        padding: calc(50px * 2) calc(50px / 2); } }
     .page-body__section__cta a img {
       height: 1.75rem;
       margin-bottom: -3px;
@@ -431,8 +432,11 @@ nav {
   width: 140%;
   margin-left: -20%; }
   .slick-slider.eshot {
-    width: 75%;
-    margin: calc(50px / 2) 0 0 0; }
+    width: 90%;
+    margin: 0 auto; }
+    .slick-slider.eshot .slick-slide {
+      margin: 50px calc(50px / 2) calc(50px / 2);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09); }
   @media (max-width: 576px) {
     .slick-slider .slick-slide {
       width: 100%;
