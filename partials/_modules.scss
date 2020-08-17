@@ -167,3 +167,56 @@ nav {
     color: $canetticodesblack;
     font-size: .65rem;
 }
+
+#cookie-container {
+    display: none; // Default hide
+    position: fixed;
+    z-index: 3000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: $dshalf;
+    background: $canetticodesblack;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    #cookie-text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+            height: 20px;
+            margin-right: $dshalf;
+            cursor: pointer;
+            path {
+                fill: $canetticodeswhite;
+                @include transitionall(.3s);
+            }
+            &:hover {
+                path {
+                    fill: $canetticodesyellow;
+                }
+            }
+            @include sm {
+                height: 40px;
+                margin-top: -7px;
+            }
+        }
+        span {
+            color: $canetticodeswhite;
+            text-align: left;
+            line-height: 2.6;
+            @include sm {
+                line-height: 1.5rem;
+            }
+            a {
+                color: $canetticodeswhite;
+                text-decoration: underline;
+            }
+        }
+        @include sm {
+            align-items: flex-start;
+        }
+    }
+}

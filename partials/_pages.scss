@@ -23,6 +23,9 @@ body {
                 margin: $dshalf auto 0;
             }
         }
+        .page-body__section__cta {
+            margin-top: 0;
+        }
     }
     &.contact {
         .hubspot-link__container.sproket {

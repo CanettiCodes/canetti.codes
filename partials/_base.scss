@@ -123,6 +123,9 @@ p {
     &.center {
       text-align: center;
     }
+    & + h2 {
+      margin-top: $ds;
+    }
 }
 
 a {
@@ -132,6 +135,17 @@ a {
     &:hover {
         cursor: pointer;
     }
+}
+
+ul {
+  padding-left: $ds;
+  margin: $dshalf 0;
+  @include sm {
+    padding-left: 30px;
+  }
+  li {
+    margin-bottom: $dshalf;
+  }
 }
 
 button, .btn {

@@ -88,6 +88,8 @@ p {
     font-size: .75rem; }
   p.center {
     text-align: center; }
+  p + h2, p + h3 {
+    margin-top: 50px; }
 
 a {
   color: #111;
@@ -95,6 +97,15 @@ a {
   position: relative; }
   a:hover {
     cursor: pointer; }
+
+ul {
+  padding-left: 50px;
+  margin: calc(50px / 2) 0; }
+  @media (max-width: 576px) {
+    ul {
+      padding-left: 30px; } }
+  ul li {
+    margin-bottom: calc(50px / 2); }
 
 button, .btn {
   background: #ffcc00;
@@ -286,6 +297,7 @@ mark {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: calc(50px * 2);
   background-color: #ffcc00;
   border-top: 2px solid #111;
   border-bottom: 2px solid #111;
@@ -478,6 +490,53 @@ nav {
   color: #111;
   font-size: .65rem; }
 
+#cookie-container {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: calc(50px / 2);
+  background: #111;
+  border-radius: 0px;
+  border: none;
+  box-shadow: none; }
+  #cookie-container #cookie-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #cookie-container #cookie-text .icon {
+      height: 20px;
+      margin-right: calc(50px / 2);
+      cursor: pointer; }
+      #cookie-container #cookie-text .icon path {
+        fill: #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+      #cookie-container #cookie-text .icon:hover path {
+        fill: #ffcc00; }
+      @media (max-width: 576px) {
+        #cookie-container #cookie-text .icon {
+          height: 40px;
+          margin-top: -7px; } }
+    #cookie-container #cookie-text span {
+      color: #fff;
+      text-align: left;
+      line-height: 2.6; }
+      @media (max-width: 576px) {
+        #cookie-container #cookie-text span {
+          line-height: 1.5rem; } }
+      #cookie-container #cookie-text span a {
+        color: #fff;
+        text-decoration: underline; }
+    @media (max-width: 576px) {
+      #cookie-container #cookie-text {
+        align-items: flex-start; } }
+
 /*
     Pages
     ---
@@ -495,6 +554,8 @@ body.home li {
     margin-top: 12.5px; }
   body.home li .btn {
     margin: calc(50px / 2) auto 0; }
+body.home .page-body__section__cta {
+  margin-top: 0; }
 body.contact .hubspot-link__container.sproket {
   display: none; }
 
